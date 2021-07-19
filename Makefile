@@ -1,6 +1,6 @@
 DEST_DIR := "build"
 GO := "go"
-CMD := "slucg"
+CMD := "ackslack"
 
 .PHONY: build clean
 

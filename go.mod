@@ -1,4 +1,4 @@
-module slucg
+module ackslack
 
 go 1.13
 

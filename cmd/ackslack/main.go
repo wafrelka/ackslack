@@ -12,7 +12,7 @@ import (
 	"github.com/jessevdk/go-flags"
 )
 
-const APP_NAME = "slucg"
+const APP_NAME = "ackslack"
 
 type Options struct {
 	ConfigPath string `short:"c" long:"config" description:"path to config file"`
