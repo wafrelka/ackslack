@@ -2,23 +2,25 @@
 
 ### Overview
 
-`ackslack` is a simple command proxy that posts Slack notification when the command exits.
+`ackslack` is a simple command wrapper that enables Slack notification when a command completes.
 
 ### Build
 
-```
+prerequisite: Go 1.13+
+
+```sh-session
 $ make
 ```
 
 ### Usage
 
-```
+```sh-session
 $ ./build/ackslack -- echo "hello"
 hello
 [*] command `/bin/echo hello` succeeded
 ```
 
-The message ``command `/bin/echo hello` succeeded`` is also sent to the specified Slack webhook.
+The message ``command `/bin/echo hello` succeeded`` is also sent to the specified Slack webhook url.
 
 ### Configuration
 
@@ -30,8 +32,8 @@ webhook_url = "https://hooks.slack.com/services/AAAAA/BBBBB/0000000000"
 
 #### Location
 
-If `ackslack` is invoked with the `--config PATH` option, `PATH` will be used.
-Otherwise, it searches the following places and uses the first one found.
+You can pass the config file path via the `--config PATH` option.
+Otherwise, `ackslack` searches the following paths and uses the first one it finds.
 
 1. `$USER_CONFIG_DIR/ackslack/ackslack.toml`
 1. `$USER_CONFIG_DIR/ackslack/config.toml`
