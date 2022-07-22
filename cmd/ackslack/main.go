@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+
 	"github.com/BurntSushi/toml"
 	"github.com/jessevdk/go-flags"
 )
@@ -16,7 +17,7 @@ const APP_NAME = "ackslack"
 
 type Options struct {
 	ConfigPath string `short:"c" long:"config" description:"path to config file"`
-	Args struct {
+	Args       struct {
 		Command []string `positional-arg-name:"COMMAND"`
 	} `positional-args:"yes" required:"yes"`
 }
@@ -27,11 +28,11 @@ type Config struct {
 
 type SlackAttachment struct {
 	Color string `json:"color"`
-	Text string `json:"text"`
+	Text  string `json:"text"`
 }
 
 type SlackMessage struct {
-	Text string `json:"text"`
+	Text        string            `json:"text"`
 	Attachments []SlackAttachment `json:"attachments"`
 }
 
