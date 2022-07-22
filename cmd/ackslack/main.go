@@ -121,11 +121,11 @@ func main() {
 	var msg SlackMessage
 
 	if err != nil {
-		text := fmt.Sprintf("command `%s` failed", proc.String())
+		text := fmt.Sprintf("failed: `%s`", proc.String())
 		fmt.Printf("[*] %s\n", text)
 		msg = CreateBadMessage(text)
 	} else {
-		text := fmt.Sprintf("command `%s` succeeded", proc.String())
+		text := fmt.Sprintf("succeeded: `%s`", proc.String())
 		fmt.Printf("[*] %s\n", text)
 		msg = CreateOkMessage(text)
 	}

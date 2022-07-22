@@ -17,10 +17,10 @@ $ make
 ```sh-session
 $ ./build/ackslack -- echo "hello"
 hello
-[*] command `/bin/echo hello` succeeded
+[*] succeeded: `/bin/echo hello`
 ```
 
-The message ``command `/bin/echo hello` succeeded`` is also sent to the specified Slack webhook url.
+The message `` succeeded: `/bin/echo hello` `` is also sent to the specified Slack webhook url.
 
 ### Configuration
 
